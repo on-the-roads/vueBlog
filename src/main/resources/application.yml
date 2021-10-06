@@ -1,0 +1,37 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345678
+  http:
+      encoding:
+        force: true
+        charset: UTF-8
+        enabled: true
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+
+#  mapper xml文件扫描路径
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+
+
+cjw:
+  jwt:
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    expire: 604800
+    header: Authorization
+
+
+
+
+
